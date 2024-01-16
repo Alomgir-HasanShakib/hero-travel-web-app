@@ -15,17 +15,15 @@ body {
   font-family: "Mulish", sans-serif;
 }
 .header,
-main {
+main,
+footer {
   max-width: 1140px;
   margin: 0 auto;
 }
 section {
   margin-bottom: 100px;
 }
-.button_primary {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
+
 /*========================================= header section style ============================================ */
 
 .navber {
@@ -50,7 +48,6 @@ section {
   display: flex;
   gap: 10px;
   align-items: center;
-  /* justify-content: center; */
 }
 .logo img {
   width: 48px;
@@ -72,7 +69,7 @@ section {
   color: var(--primary-color);
 }
 
-/* banner section styles  */
+/* ==================================banner section styles  ==================================*/
 
 .banner_section {
   margin-top: 48px;
@@ -128,7 +125,7 @@ section {
   text-align: center;
 }
 
-/* tour section styles  */
+/* ==================================tour section styles  ==================================*/
 .populer_tour {
   display: flex;
   justify-content: space-between;
@@ -143,15 +140,18 @@ section {
   color: var(--secondary-dark);
   font-size: 1rem;
   line-height: 26px;
+  text-align: left;
+
 }
 .tour_list {
   color: var(--secondary-dark);
   line-height: 26px;
+  text-align: left;
 }
 .tour_btn {
   padding: 15px 40px;
 }
-/* why choosae us  sectiion styles */
+/* ==================================why choosae us  sectiion styles ==================================*/
 .why-choose-us {
   text-align: center;
 }
@@ -210,7 +210,94 @@ section {
 .card i {
   font-size: 64px;
 }
-/* discount_section  styles */
+/* ================================destination section styles  ============================*/
+
+.destinationcontainer {
+  text-align: center;
+}
+.destiHeading{
+  font-size: 2.5rem;
+  font-weight: var(--primary-fontweight);
+  color: var(--dark-color);
+}
+.destiPera{
+  color: var(--gray-color);
+  font-size: 1rem;
+}
+.destinationContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 24px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "firstimg firstimg firstimg firstimg secondimg secondimg secondimg secondimg"
+    "thirdimg thirdimg fourthimg fourthimg fourthimg fourthimg fifthimg fifthimg"
+    "sixthimg sixthimg sixthimg seventhimg seventhimg seventhimg seventhimg seventhimg";
+}
+.destinationContainer > div img {
+  width: 100%;
+  height: 100%;
+}
+
+.firstimg {
+  grid-area: firstimg;
+  position: relative;
+}
+
+.secondimg {
+  grid-area: secondimg;
+  position: relative;
+
+}
+
+.thirdimg {
+  grid-area: thirdimg;
+  position: relative;
+
+}
+
+.fourthimg {
+  grid-area: fourthimg;
+  position: relative;
+
+}
+
+.fifthimg {
+  grid-area: fifthimg;
+  position: relative;
+
+}
+
+.sixthimg {
+  grid-area: sixthimg;
+  position: relative;
+
+}
+
+.seventhimg {
+  grid-area: seventhimg;
+  position: relative;
+
+}
+.layer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.layer h3{
+  color: var(--secondary-color);
+  font-weight: var(--primary-fontweight);
+  text-transform: uppercase;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%, -50%);
+  position: absolute;
+}
+/*================================== discount_section  styles ==================================*/
 .discount_section {
   text-align: center;
 }
@@ -278,6 +365,91 @@ h4 {
   padding: 55px;
   border-radius: 16px;
   display: flex;
+  margin-bottom: 20px;
+}
+/* ==================================newsletter section styles ================================== */
+
+.newsletter_section {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.newsletter_section form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  border: 1px solid var(--primary-color);
+  gap: 15px;
+  border-radius: 8px;
+  align-items: center;
+}
+.newsletter_section form input[type="text"] {
+  border: 0;
+  border-radius: 8px;
+  background: rgba(19, 19, 24, 0.05);
+  width: 100%;
+  padding: 20px;
+}
+.newsHeading {
+  margin: 10px;
+  text-align: left;
+}
+.news_btn {
+  width: 100%;
+  text-align: center;
+}
+.imgareacontent {
+  width: 40%;
+  position: relative;
+  margin-top: -210px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  border-radius: 8px;
+
+  transform: rotate(-45deg);
+  background: var(--primary-color);
+  width: 40%;
+  align-items: center;
+}
+.content h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--secondary-color);
+  margin: 5px;
+}
+.content h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+/* =======================footer area styles ======================================= */
+.footer {
+  background: rgba(19, 19, 24, 0.05);
+  max-width: 1140px;
+  padding: 110px;
+  text-align: center;
+}
+.footer_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer_logo span {
+  color: var(--primary-color);
+}
+.footer_logo img {
+  width: 40px;
+  height: 46px;
+  padding-right: 10px;
+}
+.footer_logo h2 {
+  font-size: 2rem;
+  font-weight: var(--primary-fontweight);
 }
 
 @media screen and (max-width: 667px) {
@@ -296,9 +468,11 @@ h4 {
   }
   .banner_section {
     padding: 25px;
+    
   }
   .banner_input {
     padding: 16px;
+
   }
   .banner_input input {
     margin-bottom: 10px;
@@ -308,6 +482,9 @@ h4 {
   }
   .hero_btn {
     width: 78%;
+  }
+  .destiHeading{
+    font-size: 1.25rem;
   }
   /* tour responsive */
   .populer_tour {
@@ -337,15 +514,133 @@ h4 {
   .package_conteiner p {
     font-size: 0.75rem;
   }
-  .firs-span{
+  .firs-span {
     padding-right: 15px;
-  }    
-  
+  }
+
   .package_conteiner span {
     font-size: 1rem;
-   display: flex;
-   flex-direction: column;
-   padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
 
+  .destinationContainer {
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: auto 3;
+    gap: 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "firstimg"
+      "secondimg"
+      "thirdimg"
+      "fourthimg"
+      "fifthimg"
+      "sixthimg"
+      "seventhimg";
+  }
+
+  .newsletter_section {
+    flex-direction: column;
+  }
+  .newsletter_section .image_area img {
+    width: 100%;
+  }
+  .imgareacontent {
+    margin-top: -160px;
+    justify-content: center;
+  }
+  .content h3 {
+    font-size: 14px;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+  .footer {
+    padding: 44px;
+  }
+  .footer_logo h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 668px) and (max-width: 992px) {
+  .navber{
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+  .logo h3 {
+    font-size: 25px;
+  }
+  .logo img {
+    width: 30.724px;
+    height: 33.516px;
+  }
+  .navlist {
+    align-items: center;
+    justify-content: center;
+  }
+  .navlist li {
+    display: none;
+  }
+  .navlist i {
+    display: block;
+    font-size: 2rem;
+    /* padding-right: 20px; */
+  }
+  .banner_section {
+    padding: 25px;
+  }
+  .banner_input {
+    padding: 16px;
+  }
+  .banner_input input {
+    margin-bottom: 10px;
+  }
+  .banner_heading {
+    font-size: 22px;
+  }
+  .hero_btn {
+    width: 85%;
+  }
+
+  .destinationContainer {
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: auto 3;
+    gap: 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "firstimg"
+      "secondimg"
+      "thirdimg"
+      "fourthimg"
+      "fifthimg"
+      "sixthimg"
+      "seventhimg";
+  }
+  .newsletter_section {
+    flex-direction: column;
+  }
+  .newsletter_section .image_area img {
+    width: 100%;
+  }
+  .imgareacontent {
+    margin-top: -190px;
+    justify-content: flex-end;
+  }
+  .content {
+    transform: rotate(-30%);
+  }
+  .content h3 {
+    font-size: 14px;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+  .populer_tour {
+    flex-direction: column-reverse;
+    text-align: center;
   }
 }
