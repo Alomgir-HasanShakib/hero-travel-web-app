@@ -19,6 +19,13 @@ main {
   max-width: 1140px;
   margin: 0 auto;
 }
+section {
+  margin-bottom: 100px;
+}
+.button_primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
 /*========================================= header section style ============================================ */
 
 .navber {
@@ -64,6 +71,8 @@ main {
 .navlist li:first-child a {
   color: var(--primary-color);
 }
+
+/* banner section styles  */
 
 .banner_section {
   margin-top: 48px;
@@ -112,12 +121,102 @@ main {
 .hero_btn {
   border: 0;
   margin-left: 20px;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 8px;
   color: var(--secondary-color);
   background: var(--primary-color);
   text-align: center;
 }
+
+/* tour section styles  */
+.populer_tour {
+  display: flex;
+  justify-content: space-between;
+  gap: 54px;
+}
+.tour_title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--dark-color);
+}
+.tour_description {
+  color: var(--secondary-dark);
+  font-size: 1rem;
+  line-height: 26px;
+}
+.tour_list {
+  color: var(--secondary-dark);
+  line-height: 26px;
+}
+.tour_btn {
+  padding: 15px 40px;
+}
+
+.why-choose-us {
+  text-align: center;
+}
+.choose_us_title {
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  font-weight: var(--primary-fontweight);
+}
+.choose_us_description {
+  font-size: 1rem;
+  color: var(--secondary-dark);
+  margin-bottom: 48px;
+}
+.card_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  gap: 24px;
+  grid-template-areas:
+    "card1 card1 card2 card2"
+    ". card3 card3 ."
+    ". . . .";
+  text-align: left;
+}
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: var(--primary-fontweight);
+}
+.card p {
+  color: var(--gray-color);
+}
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 32px;
+}
+.card i {
+  font-size: 64px;
+}
+.card1 {
+  border-radius: 16px;
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  background: rgba(251, 181, 99, 0.05);
+}
+.card2 {
+  border-radius: 16px;
+  border: 1px solid rgba(41, 206, 246, 0.2);
+  background: rgba(41, 206, 246, 0.05);
+}
+.card3 {
+  border-radius: 16px;
+  border: 1px solid rgba(233, 68, 68, 0.2);
+  background: rgba(233, 68, 68, 0.05);
+}
+
 @media screen and (max-width: 667px) {
   .logo h3 {
     font-size: 22px;
@@ -145,6 +244,23 @@ main {
     font-size: 22px;
   }
   .hero_btn {
-    width: 73%;
+    width: 78%;
+  }
+  /* tour responsive */
+  .populer_tour {
+    flex-direction: column-reverse;
+  }
+  .right_col img {
+    width: 100%;
+  }
+  /* choose us section responsive  */
+  .card_container {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 3);
+    gap: 24px;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
   }
 }
