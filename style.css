@@ -1,0 +1,115 @@
+/*========================================= shared style ============================================ */
+
+:root {
+  --primary-color: #ff5400;
+  --nav-color: #424247;
+  --secondary-color: #fff;
+  --dark-color: #131318;
+  --secondary-dark: rgba(19, 19, 24, 0.7);
+  --gray-color: #5a5a5d;
+  --primary-bg: rgba(255, 255, 255, 0.8);
+  --secondary-bg: rgba(19, 19, 24, 0.05);
+  --primary-fontweight: 800;
+}
+body {
+  font-family: "Mulish", sans-serif;
+}
+.header,
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/*========================================= header section style ============================================ */
+
+.navber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo h3 {
+  font-size: 2.25rem;
+  font-weight: var(--primary-fontweight);
+}
+.logo h3 span {
+  color: var(--primary-color);
+}
+/*========================================= navbar style ============================================ */
+
+.navlist {
+  display: flex;
+  list-style: none;
+}
+.logo{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: center; */
+}
+.logo img{
+  width: 48px;
+  height: 56px;
+}
+.navlist > li {
+  padding-right: 44px;
+}
+.navlist li a {
+  text-decoration: none;
+  color: var(--nav-color);
+  font-size: 1.12rem;
+}
+.navlist li:first-child a {
+  color: var(--primary-color);
+}
+
+.banner_section {
+    margin-top: 48px;
+  border-radius: 16px;
+  background: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url(./img/Group\ 13\ \(1\)\ \(1\).png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner_heading {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin: 24px;
+}
+.banner_description {
+  color: var(--secondary-color);
+  text-align: center;
+}
+.banner_input {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 16px;
+}
+.banner_input input {
+  padding: 16px;
+  margin-left: 20px;
+  border-radius: 8px;
+  border: 0;
+}
+.banner_input > i{
+    margin-left: -25px;
+    color: rgba(19, 19, 24, 0.50);
+}
+.hero_btn {
+  border: 0;
+  margin-left: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  text-align: center;
+}
