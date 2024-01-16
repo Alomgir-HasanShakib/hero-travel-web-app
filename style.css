@@ -151,7 +151,7 @@ section {
 .tour_btn {
   padding: 15px 40px;
 }
-
+/* why choosae us  sectiion styles */
 .why-choose-us {
   text-align: center;
 }
@@ -185,13 +185,22 @@ section {
 }
 .card1 {
   grid-area: card1;
+  border-radius: 16px;
+  border: 1px solid rgba(251, 181, 99, 0.2);
+  background: rgba(251, 181, 99, 0.05);
 }
 .card2 {
   grid-area: card2;
+  border-radius: 16px;
+  border: 1px solid rgba(41, 206, 246, 0.2);
+  background: rgba(41, 206, 246, 0.05);
 }
 
 .card3 {
   grid-area: card3;
+  border-radius: 16px;
+  border: 1px solid rgba(233, 68, 68, 0.2);
+  background: rgba(233, 68, 68, 0.05);
 }
 
 .card {
@@ -201,20 +210,74 @@ section {
 .card i {
   font-size: 64px;
 }
-.card1 {
-  border-radius: 16px;
-  border: 1px solid rgba(251, 181, 99, 0.2);
-  background: rgba(251, 181, 99, 0.05);
+/* discount_section  styles */
+.discount_section {
+  text-align: center;
 }
-.card2 {
-  border-radius: 16px;
-  border: 1px solid rgba(41, 206, 246, 0.2);
-  background: rgba(41, 206, 246, 0.05);
+.discount_section h2 {
+  font-size: 2.5rem;
+  font-weight: var(--primary-fontweight);
 }
-.card3 {
+.discount_section p {
+  color: var(--gray-color);
+  margin-bottom: 50px;
+}
+.package1 {
+  background: url(./img/package.png);
+  background-position: center;
+  background-size: cover;
+  padding: 55px;
   border-radius: 16px;
-  border: 1px solid rgba(233, 68, 68, 0.2);
-  background: rgba(233, 68, 68, 0.05);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.package_conteiner {
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2.5px);
+  padding: 50px;
+  max-width: 40%;
+  text-align: left;
+}
+.package_conteiner h2 {
+  color: var(--dark-color);
+  font-weight: var(--primary-fontweight);
+}
+.package_conteiner p {
+  color: var(--nav-color);
+}
+.package_conteiner span,
+h4 {
+  margin-right: 24px;
+  color: var(--primary-color);
+}
+.book_btn {
+  margin-left: 0;
+  padding: 14px 24px;
+}
+.package2 {
+  background: url(./img/discountImg2.png);
+
+  background-position: right;
+  background-size: cover;
+  padding: 55px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+.package3 {
+  background: url(./img/package.png);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-position: right;
+  background-size: cover;
+  padding: 55px;
+  border-radius: 16px;
+  display: flex;
 }
 
 @media screen and (max-width: 667px) {
@@ -261,6 +324,28 @@ section {
     grid-template-areas:
       "card1"
       "card2"
-      "card3"
+      "card3";
+  }
+  .package_conteiner {
+    padding: 25px;
+    max-width: 70%;
+    text-align: left;
+  }
+  .package_conteiner h2 {
+    font-size: 1.25rem;
+  }
+  .package_conteiner p {
+    font-size: 0.75rem;
+  }
+  .firs-span{
+    padding-right: 15px;
+  }    
+  
+  .package_conteiner span {
+    font-size: 1rem;
+   display: flex;
+   flex-direction: column;
+   padding-top: 10px;
+
   }
 }
