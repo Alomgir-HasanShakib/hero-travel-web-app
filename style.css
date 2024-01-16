@@ -39,18 +39,22 @@ main {
   display: flex;
   list-style: none;
 }
-.logo{
+.logo {
   display: flex;
   gap: 10px;
   align-items: center;
   /* justify-content: center; */
 }
-.logo img{
+.logo img {
   width: 48px;
   height: 56px;
 }
 .navlist > li {
   padding-right: 44px;
+}
+.navlist i {
+  width: 24px;
+  display: none;
 }
 .navlist li a {
   text-decoration: none;
@@ -62,22 +66,23 @@ main {
 }
 
 .banner_section {
-    margin-top: 48px;
+  margin-top: 48px;
   border-radius: 16px;
   background: linear-gradient(
       180deg,
       rgba(19, 19, 24, 0.8) 0%,
       rgba(19, 19, 24, 0) 100%
     ),
-    url(./img/Group\ 13\ \(1\)\ \(1\).png);
+    url(./img/banner.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 60vh;
+  /* height: 60vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 106px;
 }
 .banner_heading {
   font-size: 4rem;
@@ -100,9 +105,9 @@ main {
   border-radius: 8px;
   border: 0;
 }
-.banner_input > i{
-    margin-left: -25px;
-    color: rgba(19, 19, 24, 0.50);
+.banner_input > i {
+  margin-left: -25px;
+  color: rgba(19, 19, 24, 0.5);
 }
 .hero_btn {
   border: 0;
@@ -112,4 +117,34 @@ main {
   color: var(--secondary-color);
   background: var(--primary-color);
   text-align: center;
+}
+@media screen and (max-width: 667px) {
+  .logo h3 {
+    font-size: 22px;
+  }
+  .logo img {
+    width: 28.724px;
+    height: 33.516px;
+  }
+  .navlist li {
+    display: none;
+  }
+  .navlist i {
+    display: block;
+  }
+  .banner_section {
+    padding: 25px;
+  }
+  .banner_input {
+    padding: 16px;
+  }
+  .banner_input input {
+    margin-bottom: 10px;
+  }
+  .banner_heading {
+    font-size: 22px;
+  }
+  .hero_btn {
+    width: 73%;
+  }
 }
